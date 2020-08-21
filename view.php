@@ -24,7 +24,7 @@ if (!isset($_GET['id'])) {
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $details["name"] ?></h6>
                     <p class="card-text"><?php echo $details["dateofbirth"] . "<br>" . $details["email"] . "<br>" . $details['phone'] ?></p>
                     <a class="btn btn-warning" href="edit.php?id=<?php echo $details["attendee_id"] ?>">Edit</a>
-                    <a onclick="return confirm('are you sure you want to delete this record')" class="btn btn-danger" href="Delete.php?id=<?php echo $details["attendee_id"] ?>">Delete</a>
+                    <a onclick="return confirm('are you sure you want to delete this record')" class="btn btn-danger" href="delete.php?id=<?php echo $details["attendee_id"] ?>">Delete</a>
                 </div>
                 <a class="btn btn-primary" href="viewrecords.php">Back To List</a>
             </div>
