@@ -39,7 +39,7 @@ $speciality = $crud->getspecialities();
                 <td>
                     <a class="btn btn-primary" href="view.php?id=<?php echo $r["attendee_id"] ?>">View</a>
                     <a class="btn btn-warning" href="edit.php?id=<?php echo $r["attendee_id"] ?>">Edit</a>
-                    <a onclick="return confirm('are you sure you want to delete this record')" class="btn btn-danger" href="Delete.php?id=<?php echo $r["attendee_id"] ?>">Delete</a>
+                    <a onclick="return confirm('are you sure you want to delete this record')" class="btn btn-danger" href="delete.php?id=<?php echo $r["attendee_id"] ?>">Delete</a>
                 </td>
             </tr>
 
