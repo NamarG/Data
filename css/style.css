@@ -1,0 +1,77 @@
+.alert{text-align: center;
+    margin-top: 1%;
+}
+
+body{
+    background-color:darkgrey;
+    height: 100%;
+    margin: 0px;
+}
+html{height: 100%;}
+
+.collapsenav{
+    margin-right: 2%;
+}
+
+#footer{
+    text-align: center;
+    background-color:gray;
+    color: white;
+    position: fixed; bottom:0px;
+    width: 100%;
+}
+
+.getline{
+    margin: 1%;
+
+}
+.gettext{
+    display: inline;
+}
+
+
+#navitemslist{
+    position: absolute; right: 2%;
+}
+
+
+.navbar-brand{
+    margin-left: 2%;
+}
+
+.navbar{
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.pagecontentdiv{background-color:whitesmoke    ;
+    margin: 2%;
+    margin-top: 1%;
+    padding: 3%;
+    
+    
+
+}
+
+#successfullregistration{
+    color: green;
+
+}
+
+#unsuccessfullregistration{color: red;}
+
+
+
+
+.card{align-self: center;
+text-align: center;
+}
+
+#errormessage{
+    text-align: center;
+
+}
+
+
