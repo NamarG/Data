@@ -1,4 +1,5 @@
 <?php
+// index
 // to make navbar item active for current page set as below
 $viewrecords = "";
 $index = "active";
