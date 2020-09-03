@@ -31,7 +31,6 @@
     $crud = new crud($pdo);
     $user = new user($pdo);
 
-    $user->Insertuser("admin","password");
 
   
 

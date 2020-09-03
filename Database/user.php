@@ -12,7 +12,7 @@
             try{
                 $newPassword = md5($password.$username);
                 $result = $this->getUserByUsername($username);
-                if($result["num"]< 0){
+                if($result["num"] <= 0){
                     $sql = "INSERT INTO users (username, password) VALUES (:username,:password)";
 
                     // prepare statement on database
@@ -24,10 +24,10 @@
 
                     // ececute statement
                     $stmt->execute();
-
                     return true;
                 }else{
                     return false;
+                    
 
                 }
 
