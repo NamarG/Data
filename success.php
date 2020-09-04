@@ -24,8 +24,8 @@ if (!isset($_POST["submit"])) {
     $original_file = $_FILES["avatar"]["tmp_name"];
     $ext = pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION);
     $target_dir = "uploads/";
-    $destination = "$target_dir . $mail . ".".$ext"; 
-    // $destination = "$target_dir$contact.$ext";
+    // $destination = "$target_dir . $mail . ".".$ext"; 
+    $destination = "$target_dir$contact.$ext";
     move_uploaded_file($original_file,$destination);
 
 
