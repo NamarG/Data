@@ -71,7 +71,7 @@ if (!isset($_POST["submit"])) {
         echo "<div class='getline'> <h2 class='gettext'> Contact Number: </h2>";
         echo "<h2 class='gettext'>" . $_POST["phone"] . "</h2> <br> </div>";
         
-        echo "<img class='avatarimage' src='".$imgsrc."' alt='' >";
+        echo "<img class='avatarimage' src='".$original_file."' alt='' >";
 
         ?>
     </div>
