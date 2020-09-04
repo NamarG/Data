@@ -24,8 +24,7 @@ if (!isset($_POST["submit"])) {
     $original_file = $_FILES["avatar"]["tmp_name"];
     $ext = pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION);
     $target_dir = "uploads/";
-    // $destination = "$target_dir . $mail . ".".$ext"; 
-    $destination = "$target_dir$contact.$ext";
+    $destination = $target_dir . $mail . ".".$ext; 
     move_uploaded_file($original_file,$destination);
 
 
@@ -72,7 +71,7 @@ if (!isset($_POST["submit"])) {
         echo "<div class='getline'> <h2 class='gettext'> Contact Number: </h2>";
         echo "<h2 class='gettext'>" . $_POST["phone"] . "</h2> <br> </div>";
         
-        echo "<img class='avatarimage' src='".$imgsrc."' alt='' >";
+        echo "<img class='' src='".$imgsrc."' alt='' >";
 
         ?>
     </div>
