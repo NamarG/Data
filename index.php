@@ -20,7 +20,7 @@ $result = $crud->getspecialities();
     <h1 class="text-center">Registration </h1>
 
 
-    <form method="post" action="success.php">
+    <form method="post" action="success.php" enctype="multipart/form-data">
         <!-- firstname -->
         <div class="form-group">
             <label for="firstname">First Name</label>
@@ -67,9 +67,18 @@ $result = $crud->getspecialities();
             <small id="phonehelp" class="form-text text-muted">We will never share your contactnumber with anyone else.</small>
         </div>
 
+        <!-- Profile Picture-->
+        <label>Upload Image(Optional)</label>
+        <div class="custom-file">
+            <input type="file" accept="image/*" class="custom-file-input" name="avatar">
+            <label class="custom-file-label" for="Avatar">Choose File</label>
+        </div>
+
 
         <!-- button to submit -->
+        <div class="form-group indexsubmitbutton">
         <button name="submit" type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
 
     </form>
 

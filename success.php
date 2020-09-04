@@ -20,10 +20,25 @@ if (!isset($_POST["submit"])) {
     $phone=$_POST["phone"];
     $speciality=$_POST["speciality"];
 
+    // files for avatar
+    $original_file = $_FILES["avatar"]["tmp_name"];
+    $ext = pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION);
+    $target_dir = "uploads/";
+    $destination = $target_dir . $mail . ".".$ext;
+    move_uploaded_file($original_file,$destination);
 
-    $success = $crud->register($fname, $lname, $dob, $mail, $phone, $speciality);
+
+    if (NULL == pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION)){
+        $success = $crud->register($fname, $lname, $dob, $mail, $phone, $speciality, NULL);
+        $imgsrc = "img/defaultavatar.jpg";
+    }else{
+
+    $success = $crud->register($fname, $lname, $dob, $mail, $phone, $speciality, $destination);
+    $imgsrc = $destination;
+
+    }
+
     $specialityname = $crud->getSpecialityByID($speciality);
-    
 
 ?>
 
@@ -55,6 +70,8 @@ if (!isset($_POST["submit"])) {
         echo "<h2 class='gettext'>" . $_POST["email"] . "</h2> <br> </div>";
         echo "<div class='getline'> <h2 class='gettext'> Contact Number: </h2>";
         echo "<h2 class='gettext'>" . $_POST["phone"] . "</h2> <br> </div>";
+        
+        echo "<img class='avatarimage' src='".$imgsrc."' alt='' >";
 
         ?>
     </div>

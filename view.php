@@ -23,6 +23,7 @@ if (!isset($_GET['id'])) {
 
             <div class="card col-4" style="width: 18rem;">
                 <div class="card-body v">
+                <img class='avatarview' src='<?php echo $details["avatar_path"] ?>' alt=''>
                     <h5 class="card-title"><?php echo $details["firstname"] . " " . $details['lastname'] ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $details["name"] ?></h6>
                     <p class="card-text"><?php echo $details["dateofbirth"] . "<br>" . $details["email"] . "<br>" . $details['phone'] ?></p>

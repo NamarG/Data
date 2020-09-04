@@ -12,10 +12,10 @@
         }
 
 
-        public function register($firstname, $lastname, $dob, $email, $phone, $speciality){
+        public function register($firstname, $lastname, $dob, $email, $phone, $speciality, $avatarpath){
             try {
                 //code...
-                $sql = "INSERT INTO attendees (firstname,lastname,dateofbirth,email,phone,speciality_id) VALUES (:firstname,:lastname,:dob,:email,:phone,:speciality)";
+                $sql = "INSERT INTO attendees (firstname,lastname,dateofbirth,email,phone,speciality_id, avatar_path) VALUES (:firstname,:lastname,:dob,:email,:phone,:speciality, :avatarpath)";
                 $statement = $this->db->prepare($sql);
                 
                 
@@ -25,6 +25,8 @@
                 $statement->bindparam(':email', $email);
                 $statement->bindparam(':phone', $phone);
                 $statement->bindparam(':speciality', $speciality);
+                $statement->bindparam(':avatarpath', $avatarpath);
+
 
                 $statement->execute();
                 return true;

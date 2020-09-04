@@ -26,6 +26,7 @@ $speciality = $crud->getspecialities();
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Speciality</th>
+                <th scope="col">Profile Picture</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -38,9 +39,11 @@ $speciality = $crud->getspecialities();
                 <td><?php echo $r["firstname"] ?></td>
                 <td><?php echo $r["lastname"] ?></td>
                 <td><?php echo $r["name"] ?></td>
+                <td><img class='avatarviewrecords' src='<?php echo $r["avatar_path"] ?>' alt=''> </td>
                 <td>
                     <a class="btn btn-primary" href="view.php?id=<?php echo $r["attendee_id"] ?>">View</a>
                     <a class="btn btn-warning" href="edit.php?id=<?php echo $r["attendee_id"] ?>">Edit</a>
+                    <!-- alternate image not working as we have a path for image even when no image uploaded -->
                     <a onclick="return confirm('are you sure you want to delete this record')" class="btn btn-danger" href="delete.php?id=<?php echo $r["attendee_id"] ?>">Delete</a>
                 </td>
             </tr>

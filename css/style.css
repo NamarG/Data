@@ -2,6 +2,21 @@
     margin-top: 1%;
 }
 
+.avatarimage{
+    width: 20%;
+    height: 20%;
+}
+
+.avatarviewrecords{
+    height: 2.5%;
+
+}
+.avatarview{
+    /* height: 2.5%; */
+    width: 50%;
+
+}
+
 body{
     background-color:darkgray;
     height: 100%;
@@ -29,6 +44,10 @@ html{height: 100%;}
     display: inline;
 }
 
+.indexsubmitbutton{
+    margin-top: 1%;
+
+}
 #loginbutton{
     margin-top: 2%;
 }
