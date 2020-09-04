@@ -4,11 +4,13 @@
         // private class object of database
         private $db;
 
+
         function __construct($conn)
         {
             // connection params to connect class object to db
             $this->db = $conn;
         }
+
 
         public function register($firstname, $lastname, $dob, $email, $phone, $speciality){
             try {
@@ -37,6 +39,7 @@
             }
         }
 
+
         public function getattendees(){
             try{
                 $sql = "SELECT * FROM attendees a inner join specialities b on a.speciality_id = b.speciality_id";
@@ -48,9 +51,9 @@
                 return false;
 
 
+            }
         }
 
-        }
 
         public function getattendeesdetails($id){
             try{
@@ -68,6 +71,7 @@
             }
         }
 
+
         public function getspecialities(){
             try{
                 $sql = "SELECT * FROM specialities";
@@ -79,9 +83,26 @@
                 return false;
 
 
+            }
         }
 
+
+        public function getSpecialityByID($id){
+            try{
+            $sql = "SELECT * FROM specialities WHERE speciality_id = :ID";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindparam(":ID",$id);
+            $stmt->execute();
+            $result = $stmt->fetch();
+            return $result;
+            
+            }catch(PDOException $e){
+                echo $e->getMessage();
+                return false;
+            }
+
         }
+
 
         public function update($id,$firstname, $lastname, $dob, $email, $phone, $speciality){
             
