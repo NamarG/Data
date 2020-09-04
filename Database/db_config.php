@@ -1,17 +1,17 @@
 <?php
     // development connection
-    $host = "localhost";
-    $db = "data_db";
-    $user = "root";
-    $pass = "";
-    $charset = "utf8mb4";
+    // $host = "localhost";
+    // $db = "data_db";
+    // $user = "root";
+    // $pass = "";
+    // $charset = "utf8mb4";
 
     // remote database connection
-    // $host = "remotemysql.com";
-    // $db = "vkoSa8vQBz";
-    // $user = "vkoSa8vQBz";
-    // $pass = "YkSzLKg6Yg";
-    // $charset = "utf8mb4";
+    $host = "remotemysql.com";
+    $db = "vkoSa8vQBz";
+    $user = "vkoSa8vQBz";
+    $pass = "YkSzLKg6Yg";
+    $charset = "utf8mb4";
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset"; 
 
