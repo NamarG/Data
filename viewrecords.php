@@ -2,11 +2,13 @@
 // to make navbar item active for current page set as below
 $viewrecords = "active";
 $index = "";
-
-
 $title = "View Attendees";
 require_once "includes/header.php";
 require_once "includes/navbar.php";
+// include check of authorisation code, in this we check if session id isset or not and if not then re-direct to login page
+require_once "includes/auth_check.php";
+
+// db config file setup of db and instantiation of classes to access db
 require_once "Database/db_config.php";
 
 

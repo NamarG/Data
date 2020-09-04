@@ -7,7 +7,11 @@ $index = "active";
 $title = "Index";
 require_once "includes/header.php";
 require_once "includes/navbar.php";
+// include check of authorisation code, in this we check if session id isset or not and if not then re-direct to login page
+require_once "includes/auth_check.php";
+
 require_once "Database/db_config.php";
+
 if (!isset($_GET['id'])) {
     echo "<h1>Error</h1>";
 } else {
