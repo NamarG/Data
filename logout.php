@@ -3,6 +3,7 @@
 require_once "includes/session.php";
 
 // destroy session command
-session_destroy()
+session_destroy();
+header("Location:index.php");
 
 ?>
