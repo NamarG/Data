@@ -39,7 +39,7 @@ $speciality = $crud->getspecialities();
                 <td><?php echo $r["firstname"] ?></td>
                 <td><?php echo $r["lastname"] ?></td>
                 <td><?php echo $r["name"] ?></td>
-                <td><img class='avatarviewrecords' src='<?php echo $r["avatar_path"] ?>' alt=''> </td>
+                <td><img class='avatarviewrecords' src='<?php echo empty($r["avatar_path"])? "img/defaultavatar.jpg":$r["avatar_path"] ?>' alt=''> </td>
                 <td>
                     <a class="btn btn-primary" href="view.php?id=<?php echo $r["attendee_id"] ?>">View</a>
                     <a class="btn btn-warning" href="edit.php?id=<?php echo $r["attendee_id"] ?>">Edit</a>
