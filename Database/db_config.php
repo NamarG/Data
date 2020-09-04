@@ -29,7 +29,7 @@
     require_once "user.php";
 
     $crud = new crud($pdo);
-    $user = new user($pdo);
+    $userdb = new user($pdo);
 
 
   

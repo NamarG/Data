@@ -36,7 +36,7 @@
                 return false;
             }
         }
-        public function Getuser($username, $password){
+        public function getUser($username, $password){
             try{
                 $sql = "SELECT * FROM users WHERE username = :username AND password = :password";
                 $stmt = $this->db->prepare($sql);

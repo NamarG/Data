@@ -1,3 +1,8 @@
+<?php
+// includes the session file, this file contains code to start and stop session, header file allows it to be usable by every page
+include_once "includes/session.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

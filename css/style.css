@@ -29,6 +29,9 @@ html{height: 100%;}
     display: inline;
 }
 
+#loginbutton{
+    margin-top: 2%;
+}
 
 #navitemslist{
     position: absolute; right: 2%;
@@ -60,6 +63,7 @@ html{height: 100%;}
 
 }
 
+
 #unsuccessfullregistration{color: red;}
 
 
@@ -71,7 +75,6 @@ text-align: center;
 
 #errormessage{
     text-align: center;
-
 }
 
 
