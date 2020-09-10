@@ -13,7 +13,6 @@ require_once "Database/db_config.php";
 
 
 $results = $crud->getattendees();
-$speciality = $crud->getspecialities();
 
 ?>
 
